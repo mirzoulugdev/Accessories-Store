@@ -6,4 +6,5 @@ class AppIcons {
   static const emailIcon = 'assets/icons/mail.png';
   static const lockIcon = 'assets/icons/lock.png';
   static const searchIcon = 'assets/icons/search.png';
+  static const arrowIcon = 'assets/icons/arrow.png';
 }

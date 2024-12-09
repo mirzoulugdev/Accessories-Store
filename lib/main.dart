@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             seedColor: AppColors.mainColor.withOpacity(0.5),
           ),
         ),
-        home: const SignUpScreen(),
+        home: const HomeScreen(),
         routes: {
           SignInScreen.routeName: (context) => const SignInScreen(),
           SignUpScreen.routeName: (context) => const SignUpScreen(),

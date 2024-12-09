@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "567900130700",
+    "project_id": "accessories-store-6e6d1",
+    "storage_bucket": "accessories-store-6e6d1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567900130700:android:7d09faeddbaa40b8a5daa9",
+        "android_client_info": {
+          "package_name": "com.example.accessories_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdjz9WGRl_lg2norHJJKB-qxjwSyGa9lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

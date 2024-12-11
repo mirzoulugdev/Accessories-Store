@@ -1,7 +1,8 @@
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_icons.dart';
 
 class SignInInput extends StatefulWidget {
   const SignInInput({super.key});

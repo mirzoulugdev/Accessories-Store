@@ -1,9 +1,10 @@
-import '../widgets/lastest_search.dart';
-import '../widgets/popular_product.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_icons.dart';
+import '../widgets/lastest_search.dart';
+import '../widgets/popular_product.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});

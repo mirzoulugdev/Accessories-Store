@@ -1,8 +1,9 @@
-import '../widgets/explore_filter.dart';
-import '../widgets/products.dart';
-import '../../../../core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/utils/app_icons.dart';
+import '../widgets/explore_filter.dart';
+import '../widgets/products.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});

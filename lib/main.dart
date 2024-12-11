@@ -2,12 +2,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/utils/app_colors.dart';
+import 'features/articles/presentation/screens/explore_screen.dart';
+import 'features/articles/presentation/screens/home_screen.dart';
+import 'features/auth/presentation/screens/sign_in_screen.dart';
+import 'features/auth/presentation/screens/sign_up_screen.dart';
 import 'firebase_options.dart';
-import 'src/features/articles/presentation/screens/explore_screen.dart';
-import 'src/features/articles/presentation/screens/home_screen.dart';
-import 'src/features/auth/presentation/screens/sign_in_screen.dart';
-import 'src/features/auth/presentation/screens/sign_up_screen.dart';
-import 'src/core/utils/app_colors.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

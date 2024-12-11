@@ -1,11 +1,11 @@
-import 'sign_up_screen.dart';
-import '../widgets/sign_in_input.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_images.dart';
 import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_images.dart';
+import '../widgets/sign_in_input.dart';
+import 'sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

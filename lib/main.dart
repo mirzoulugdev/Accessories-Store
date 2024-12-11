@@ -1,15 +1,13 @@
-import 'package:accessories_store/core/presentation/screens/explore_screen.dart';
-import 'package:accessories_store/core/presentation/screens/home_screen.dart';
-import 'package:accessories_store/core/presentation/screens/sign_up_screen.dart';
-
-import '../core/presentation/screens/sign_in_screen.dart';
-import '../core/presentation/screens/search_screen.dart';
-
-import 'firebase_options.dart';
-import '../core/utils/app_colors.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'firebase_options.dart';
+import 'src/features/articles/presentation/screens/explore_screen.dart';
+import 'src/features/articles/presentation/screens/home_screen.dart';
+import 'src/features/auth/presentation/screens/sign_in_screen.dart';
+import 'src/features/auth/presentation/screens/sign_up_screen.dart';
+import 'src/core/utils/app_colors.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,11 +15,11 @@ void main() {
   Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

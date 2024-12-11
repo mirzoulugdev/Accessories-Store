@@ -1,9 +1,5 @@
-import '../screens/home_screen.dart';
-import 'package:flutter/cupertino.dart';
-
-import '../../../logic/services/sign_in.dart';
-import '../../utils/app_colors.dart';
-import '../../utils/app_icons.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -99,28 +95,7 @@ class _SignInInputState extends State<SignInInput> {
           ),
           SizedBox(height: 20.h),
           InkWell(
-            onTap: () async {
-              _save();
-              final response = await signInWithEmailPassword(
-                context: context,
-                email: emailController.text.trim(),
-                password: passwordController.text.trim(),
-              );
-              // await Future.delayed(const Duration(seconds: 3));
-              if (response) {
-// / ignore: use_build_context_synchronously
-                Navigator.of(context).push(
-                  CupertinoPageRoute(
-                    builder: (context) => const HomeScreen(),
-                    fullscreenDialog: true,
-                  ),
-                );
-                emailController.clear();
-                passwordController.clear();
-              } else {
-                print("Xatolik yuz berdi");
-              }
-            },
+            onTap: () {},
             child: Container(
               alignment: Alignment.center,
               width: double.infinity.w,

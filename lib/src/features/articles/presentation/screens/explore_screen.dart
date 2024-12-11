@@ -1,6 +1,6 @@
-import 'package:accessories_store/core/presentation/widgets/explore_filter.dart';
-import 'package:accessories_store/core/presentation/widgets/products.dart';
-import 'package:accessories_store/core/utils/app_icons.dart';
+import '../widgets/explore_filter.dart';
+import '../widgets/products.dart';
+import '../../../../core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

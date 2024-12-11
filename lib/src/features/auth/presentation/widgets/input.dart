@@ -1,12 +1,7 @@
-import 'package:accessories_store/core/presentation/screens/home_screen.dart';
-import 'package:accessories_store/core/utils/app_colors.dart';
-import 'package:accessories_store/core/utils/app_icons.dart';
-import 'package:flutter/cupertino.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../logic/services/sign_up.dart';
-import '../../../../../model/user.dart';
 
 class Input extends StatefulWidget {
   const Input({super.key});
@@ -25,8 +20,6 @@ class _InputState extends State<Input> {
       _formKey.currentState!.save();
     }
   }
-
-  User user = User(id: "", email: "", password: "");
 
   @override
   Widget build(BuildContext context) {
@@ -89,30 +82,7 @@ class _InputState extends State<Input> {
           ),
           const SizedBox(height: 25),
           InkWell(
-            onTap: () async {
-              _save();
-              final response = await signUpWithEmailPassword(
-                context: context,
-                email: emailController.text.trim(),
-                password: passwordController.text.trim(),
-              );
-
-              await Future.delayed(const Duration(seconds: 3));
-              print(response);
-
-              if (response) {
-                Navigator.of(context).push(
-                  CupertinoPageRoute(
-                    builder: (context) => const HomeScreen(),
-                    fullscreenDialog: true,
-                  ),
-                );
-                emailController.clear();
-                passwordController.clear();
-              } else {
-                return;
-              }
-            },
+            onTap: () {},
             child: Container(
               alignment: Alignment.center,
               width: double.infinity.w,

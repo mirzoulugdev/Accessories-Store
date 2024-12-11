@@ -1,4 +1,4 @@
-import '../../utils/app_images.dart';
+import '../../../../core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

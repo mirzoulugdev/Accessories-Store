@@ -1,6 +1,6 @@
-import 'package:accessories_store/utils/app_colors.dart';
-import 'package:accessories_store/utils/app_icons.dart';
-import 'package:accessories_store/utils/app_images.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/app_icons.dart';
+import '../../utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

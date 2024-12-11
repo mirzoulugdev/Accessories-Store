@@ -1,8 +1,8 @@
-import 'package:accessories_store/presentation/screens/home/widgets/featured_products.dart';
-import 'package:accessories_store/presentation/screens/home/widgets/product_view.dart';
-import 'package:accessories_store/utils/app_colors.dart';
-import 'package:accessories_store/utils/app_icons.dart';
-import 'package:accessories_store/utils/app_images.dart';
+import '../widgets/featured_products.dart';
+import '../widgets/product_view.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/app_icons.dart';
+import '../../utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

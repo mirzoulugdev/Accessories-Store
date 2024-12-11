@@ -1,9 +1,12 @@
-import 'package:accessories_store/presentation/screens/SignIn/screen/sign_in_screen.dart';
-import 'package:accessories_store/presentation/screens/home/screen/home_screen.dart';
+import 'package:accessories_store/core/presentation/screens/explore_screen.dart';
+import 'package:accessories_store/core/presentation/screens/home_screen.dart';
+import 'package:accessories_store/core/presentation/screens/sign_up_screen.dart';
+
+import '../core/presentation/screens/sign_in_screen.dart';
+import '../core/presentation/screens/search_screen.dart';
 
 import 'firebase_options.dart';
-import 'presentation/screens/SignUp/screen/sign_up_screen.dart';
-import 'utils/app_colors.dart';
+import '../core/utils/app_colors.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
             seedColor: AppColors.mainColor.withOpacity(0.5),
           ),
         ),
-        home: const HomeScreen(),
+        home: const ExploreScreen(),
         routes: {
           SignInScreen.routeName: (context) => const SignInScreen(),
           SignUpScreen.routeName: (context) => const SignUpScreen(),

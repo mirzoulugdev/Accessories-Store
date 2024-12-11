@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../errors/error.dart'; // Xatolarni ko'rsatish uchun AuthError klassi
+import '../../../core/domain/errors/error.dart'; // Xatolarni ko'rsatish uchun AuthError klassi
 
 Future<bool> signInWithEmailPassword({
   required BuildContext context,

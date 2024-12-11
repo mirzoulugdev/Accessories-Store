@@ -1,10 +1,10 @@
-import 'package:accessories_store/presentation/screens/SignIn/screen/sign_in_screen.dart';
+import 'package:accessories_store/core/presentation/screens/sign_in_screen.dart';
+import 'package:accessories_store/core/utils/app_colors.dart';
+import 'package:accessories_store/core/utils/app_images.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../widgets/entry_with_social_media.dart';
 import '../widgets/input.dart';
-import '../../../../utils/app_colors.dart';
-import '../../../../utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

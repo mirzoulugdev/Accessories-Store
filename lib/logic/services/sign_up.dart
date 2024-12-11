@@ -1,9 +1,10 @@
 // ignore_for_file: use_build_context_synchronously, avoid_print
 
-import '../errors/error.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/domain/errors/error.dart';
 
 Future<bool> signUpWithEmailPassword({
   required BuildContext context,

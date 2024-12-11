@@ -1,22 +1,22 @@
-import 'package:accessories_store/presentation/screens/home/screen/home_screen.dart';
+import 'package:accessories_store/core/presentation/screens/home_screen.dart';
+import 'package:accessories_store/core/utils/app_colors.dart';
+import 'package:accessories_store/core/utils/app_icons.dart';
 import 'package:flutter/cupertino.dart';
-
-import '../../../../logic/services/sign_in.dart';
-import '../../../../utils/app_colors.dart';
-import '../../../../utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignInInput extends StatefulWidget {
-  const SignInInput({super.key});
+import '../../../../../logic/services/sign_up.dart';
+import '../../../../../model/user.dart';
+
+class Input extends StatefulWidget {
+  const Input({super.key});
 
   @override
-  State<SignInInput> createState() => _SignInInputState();
+  State<Input> createState() => _InputState();
 }
 
-class _SignInInputState extends State<SignInInput> {
+class _InputState extends State<Input> {
   final _formKey = GlobalKey<FormState>();
-
   late TextEditingController emailController = TextEditingController();
   late TextEditingController passwordController = TextEditingController();
 
@@ -25,6 +25,8 @@ class _SignInInputState extends State<SignInInput> {
       _formKey.currentState!.save();
     }
   }
+
+  User user = User(id: "", email: "", password: "");
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +37,16 @@ class _SignInInputState extends State<SignInInput> {
           TextFormField(
             decoration: InputDecoration(
               prefixIcon: Image.asset(AppIcons.emailIcon),
+              hintText: "Email",
+              hintStyle: const TextStyle(
+                fontSize: 16,
+                color: AppColors.greyColor,
+                fontWeight: FontWeight.w400,
+              ),
               filled: true,
               fillColor: Colors.white,
-              hintText: "Email",
-              hintStyle: TextStyle(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w300,
-                color: AppColors.greyColor,
-              ),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15.r),
+                borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide.none,
               ),
             ),
@@ -58,20 +60,20 @@ class _SignInInputState extends State<SignInInput> {
             },
             controller: emailController,
           ),
-          SizedBox(height: 20.h),
+          const SizedBox(height: 20),
           TextFormField(
             decoration: InputDecoration(
               prefixIcon: Image.asset(AppIcons.lockIcon),
+              hintText: "Password",
+              hintStyle: const TextStyle(
+                fontSize: 16,
+                color: AppColors.greyColor,
+                fontWeight: FontWeight.w400,
+              ),
               filled: true,
               fillColor: Colors.white,
-              hintText: "Password",
-              hintStyle: TextStyle(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w300,
-                color: AppColors.greyColor,
-              ),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15.r),
+                borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide.none,
               ),
             ),
@@ -79,36 +81,26 @@ class _SignInInputState extends State<SignInInput> {
               if (value == null || value.isEmpty) {
                 return "Iltimos parolingizni kiriting!";
               } else if (value.length < 8) {
-                return "Parol kamida 8 ta belgidan kam bo'lmasligi kerak";
+                return "Iltimos parolingiz 8 ta belgidan kam bo'lmasligi kerak";
               }
               return null;
             },
             controller: passwordController,
           ),
-          SizedBox(height: 20.h),
-          TextButton(
-            onPressed: () {},
-            child: const Text(
-              "Forgot Password",
-              style: TextStyle(
-                fontSize: 18,
-                color: AppColors.whiteColor,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-          SizedBox(height: 20.h),
+          const SizedBox(height: 25),
           InkWell(
             onTap: () async {
               _save();
-              final response = await signInWithEmailPassword(
+              final response = await signUpWithEmailPassword(
                 context: context,
                 email: emailController.text.trim(),
                 password: passwordController.text.trim(),
               );
-              // await Future.delayed(const Duration(seconds: 3));
+
+              await Future.delayed(const Duration(seconds: 3));
+              print(response);
+
               if (response) {
-// / ignore: use_build_context_synchronously
                 Navigator.of(context).push(
                   CupertinoPageRoute(
                     builder: (context) => const HomeScreen(),
@@ -118,7 +110,7 @@ class _SignInInputState extends State<SignInInput> {
                 emailController.clear();
                 passwordController.clear();
               } else {
-                print("Xatolik yuz berdi");
+                return;
               }
             },
             child: Container(
@@ -130,7 +122,7 @@ class _SignInInputState extends State<SignInInput> {
                 color: AppColors.mainColor,
               ),
               child: Text(
-                "Sign In",
+                "Sign Up",
                 style: TextStyle(
                   fontSize: 18.sp,
                   color: AppColors.whiteColor,
@@ -138,7 +130,7 @@ class _SignInInputState extends State<SignInInput> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

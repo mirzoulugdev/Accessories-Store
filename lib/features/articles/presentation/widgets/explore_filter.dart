@@ -32,7 +32,7 @@ class _ExploreFilterState extends State<ExploreFilter> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      isDismissible: false,
+      // isDismissible: false,
       builder: (context) {
         return StatefulBuilder(
           builder: (BuildContext context, StateSetter setModalState) {
@@ -84,7 +84,7 @@ class _ExploreFilterState extends State<ExploreFilter> {
                                   horizontal: 16, vertical: 8),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(40.r),
-                                color: Colors.green,
+                                color: AppColors.mainColor,
                               ),
                               child: Text(
                                 categories[index],
@@ -134,7 +134,7 @@ class _ExploreFilterState extends State<ExploreFilter> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.r),
                               color: sortOptions[index]['isTrue']
-                                  ? Colors.green
+                                  ? AppColors.mainColor
                                   : Colors.white,
                               border: sortOptions[index]['isTrue']
                                   ? null
@@ -153,15 +153,25 @@ class _ExploreFilterState extends State<ExploreFilter> {
                       },
                     ),
                     SizedBox(height: 20.h),
-                    Container(
-                      alignment: Alignment.center,
-                      width: double.infinity,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: AppColors.mainColor,
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: double.infinity,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: AppColors.mainColor,
+                        ),
+                        child: Text(
+                          "Apply Filter",
+                          style: TextStyle(
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.whiteColor,
+                          ),
+                        ),
                       ),
-                      child: const Text("Apply Filter"),
                     )
                   ],
                 ),

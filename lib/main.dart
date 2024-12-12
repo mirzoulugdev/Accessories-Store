@@ -1,4 +1,4 @@
-import 'package:firebase_core/firebase_core.dart';
+import 'package:accessories_store/features/articles/presentation/screens/product_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,14 +7,8 @@ import 'features/articles/presentation/screens/explore_screen.dart';
 import 'features/articles/presentation/screens/home_screen.dart';
 import 'features/auth/presentation/screens/sign_in_screen.dart';
 import 'features/auth/presentation/screens/sign_up_screen.dart';
-import 'firebase_options.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
   runApp(const MyApp());
 }
 
@@ -32,7 +26,7 @@ class MyApp extends StatelessWidget {
             seedColor: AppColors.mainColor.withOpacity(0.5),
           ),
         ),
-        home: const ExploreScreen(),
+        home: const ProductDetailsScreen(),
         routes: {
           SignInScreen.routeName: (context) => const SignInScreen(),
           SignUpScreen.routeName: (context) => const SignUpScreen(),
